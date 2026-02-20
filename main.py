@@ -27,7 +27,7 @@ def main():
     amount = parse_digits(deed["amount_digits"])
     tax = amount * county_info["tax_rate"]
 
-    print("Deed is valid ✅")
+    print("Deed is valid ")
     print("County:", county_info["name"])
     print("Computed tax:", tax)
 

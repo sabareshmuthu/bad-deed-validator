@@ -43,7 +43,7 @@ def parse_deed_with_llm(raw_text: str) -> dict:
     """
 
     if USE_STUB:
-        print("ℹ️ Using stub parser (USE_STUB=1)")
+        print(" Using stub parser (USE_STUB=1)")
         return _stub_parse()
 
     prompt = f"""
@@ -77,6 +77,6 @@ Text:
         return json.loads(content)
 
     except Exception as e:
-        print("⚠️ LLM failed, falling back to stub parser:")
+        print(" LLM failed, falling back to stub parser:")
         print("   ", e)
         return _stub_parse()
